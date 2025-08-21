@@ -3,97 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Rede Social</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ferramenta de Estudo de Programação</title>
+    <link rel="stylesheet" href="estudo.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <i class="fas fa-users"></i>
-            <span>Social</span>
+
+    <div class="container">
+        <h1>Ferramenta de Estudo - Conceitos de Programação</h1>
+        <p>Responda as perguntas abaixo e marque se sua resposta está correta!</p>
+
+        <!-- Questionário -->
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer('answer1')">
+                <p><strong>1. O que é uma variável?</strong></p>
+                <div class="answer" id="answer1">
+                    <p>Uma variável é um espaço de armazenamento usado para guardar dados durante a execução do programa.</p>
+                    <button onclick="checkAnswer('correct', 'question1')" class="button-correct">Está certo</button>
+                    <button onclick="checkAnswer('incorrect', 'question1')" class="button-incorrect">Está errado</button>
+                    <p id="feedback-question1"></p>
+                </div>
+            </div>
         </div>
-        <nav class="nav">
-            <a href="#"><i class="fas fa-home"></i> Início</a>
-            <a href="#"><i class="fas fa-user-circle"></i> Perfil</a>
-            <a href="#"><i class="fas fa-bell"></i> Notificações</a>
-            <a href="#"><i class="fas fa-search"></i> Buscar</a>
-        </nav>
-    </header>
 
-    <main class="main-content">
-        <div class="feed-container">
-            <!-- Post 1 -->
-            <div class="post-card">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50" alt="Foto de Perfil" class="profile-pic">
-                    <div class="post-info">
-                        <strong>Lucas Silva</strong>
-                        <span>@lucas_silva_23</span>
-                        <span class="post-time">Há 10 minutos</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Essa é a minha primeira postagem na nova rede social! 🎉</p>
-                </div>
-                <div class="post-actions">
-                    <button><i class="far fa-heart"></i> Curtir</button>
-                    <button><i class="fas fa-comment-alt"></i> Comentar</button>
-                    <button><i class="fas fa-share"></i> Compartilhar</button>
-                    <button><i class="fas fa-bookmark"></i> Salvar</button>
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer('answer2')">
+                <p><strong>2. O que é uma função?</strong></p>
+                <div class="answer" id="answer2">
+                    <p>Uma função é um bloco de código que realiza uma tarefa específica e pode ser reutilizado em várias partes do programa.</p>
+                    <button onclick="checkAnswer('correct', 'question2')" class="button-correct">Está certo</button>
+                    <button onclick="checkAnswer('incorrect', 'question2')" class="button-incorrect">Está errado</button>
+                    <p id="feedback-question2"></p>
                 </div>
             </div>
+        </div>
 
-            <!-- Post 2 -->
-            <div class="post-card">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50" alt="Foto de Perfil" class="profile-pic">
-                    <div class="post-info">
-                        <strong>Amanda Souza</strong>
-                        <span>@amanda_souza_92</span>
-                        <span class="post-time">Há 30 minutos</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Estive pensando sobre como as redes sociais podem nos conectar de maneira tão forte! 🤔</p>
-                </div>
-                <div class="post-actions">
-                    <button><i class="far fa-heart"></i> Curtir</button>
-                    <button><i class="fas fa-comment-alt"></i> Comentar</button>
-                    <button><i class="fas fa-share"></i> Compartilhar</button>
-                    <button><i class="fas fa-bookmark"></i> Salvar</button>
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer('answer3')">
+                <p><strong>3. O que é um loop?</strong></p>
+                <div class="answer" id="answer3">
+                    <p>Um loop é uma estrutura que repete um bloco de código enquanto uma condição for verdadeira.</p>
+                    <button onclick="checkAnswer('correct', 'question3')" class="button-correct">Está certo</button>
+                    <button onclick="checkAnswer('incorrect', 'question3')" class="button-incorrect">Está errado</button>
+                    <p id="feedback-question3"></p>
                 </div>
             </div>
+        </div>
 
-            <!-- Post 3 -->
-            <div class="post-card">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50" alt="Foto de Perfil" class="profile-pic">
-                    <div class="post-info">
-                        <strong>Ricardo Martins</strong>
-                        <span>@ricardo_martins</span>
-                        <span class="post-time">Há 45 minutos</span>
-                    </div>
-                </div>
-                <div class="post-body">
-                    <p>Que dia maravilhoso para aprender algo novo! Hoje comecei a aprender programação web. 💻🚀</p>
-                </div>
-                <div class="post-actions">
-                    <button><i class="far fa-heart"></i> Curtir</button>
-                    <button><i class="fas fa-comment-alt"></i> Comentar</button>
-                    <button><i class="fas fa-share"></i> Compartilhar</button>
-                    <button><i class="fas fa-bookmark"></i> Salvar</button>
+        <div class="question-container">
+            <div class="question" onclick="toggleAnswer('answer4')">
+                <p><strong>4. O que é uma condição (if)?</strong></p>
+                <div class="answer" id="answer4">
+                    <p>A condição "if" permite que o programa execute um bloco de código apenas se uma condição for verdadeira.</p>
+                    <button onclick="checkAnswer('correct', 'question4')" class="button-correct">Está certo</button>
+                    <button onclick="checkAnswer('incorrect', 'question4')" class="button-incorrect">Está errado</button>
+                    <p id="feedback-question4"></p>
                 </div>
             </div>
+        </div>
 
-            <!-- Post 4 -->
-            <div class="post-card">
-                <div class="post-header">
-                    <img src="https://via.placeholder.com/50" alt="Foto de Perfil" class="profile-pic">
-                    <div class="post-info">
-                        <strong>Juliana Pereira</strong>
-                        <span>@ju_pereira</span>
-                        <span class="post-time">Há 1 hora</span>
-                    </div>
-                </div>
-                <div
+        <div id="result">
+            <h2>Você acertou <span id="score">0</span> de 4!</h2>
+            <button onclick="resetQuiz()">Reiniciar Estudo</button>
+        </div>
+    </div>
+
+    <script src="estudo.js"></script>
+</body>
+</html>
